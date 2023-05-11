@@ -14,7 +14,7 @@ const Contact2 = ({ onContactClick }) => {
         className="bg-gray-900 w-full h-full px-8 py-8 text-white flex flex-col justify-center items-center content-center relative"
       >
         {/* <div id="opacity-bg" className="h-full bg-gray-100 opacity-90 p-4 z-10"> */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-thin text-center  text-gray-400 mt-36">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-thin text-center  text-gray-400 mt-24">
           Lorem ipsum dolor <br />{" "}
           <span className="font-normal text-white">
             {" "}
