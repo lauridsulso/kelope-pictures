@@ -1,44 +1,93 @@
-import React from "react";
-import production from "../assets/production.jpg";
+import React, { useState } from "react";
 
 const Contact = () => {
-  return (
-    <div id="contact" className="h-screen max-w-screen m-0 p-16 font-oswald">
-      <div className="flex flex-row justify-around">
-        <div className="basis-2/5">
-          <h1 className="text-8xl">
-            Wanna <br></br> collaborate?
-          </h1>
-        </div>
-        <div className="basis-2/5">
-          <p className="text-lg">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
-            veritatis, animi amet quae adipisci unde obcaecati tempora
-            assumenda, perspiciatis sint possimus sapiente minus ab iste maxime
-            doloribus rerum natus deserunt. <br /> <br />
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
-            veritatis, animi amet quae adipisci unde obcaecati tempora
-            assumenda, perspiciatis sint possimus sapiente minus ab iste maxime
-            doloribus rerum natus deserunt.
-          </p>
-        </div>
-      </div>
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-      <div className="flex flex-row justify-around mt-16">
-        <div className="basis-2/5">
-          <img className="w-full" src={production} alt="" />
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log(formData);
+    // Reset form fields
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
+  };
+
+  return (
+    <div className="p-4">
+      <h1 className="text-2xl font-bold mb-4">Contact Form</h1>
+      <form onSubmit={handleSubmit}>
+        <div className="mb-4">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="name"
+          >
+            Name
+          </label>
+          <input
+            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="name"
+            type="text"
+            placeholder="Your Name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
         </div>
-        <div className="basis-2/5 bg-gray-500 px-16 py-6 relative">
-          <p className="text-lg">Lorem ipsum dolor sit amet consectetur</p>
-          <h2 className="text-4xl font-bold text-white">
-            adipisicing elit. Quae accusamus debitis velit commodi non
-            voluptatum
-          </h2>
-          <button className="absolute bottom-10 m-auto w-4/5 hover:bg-transparent bg-black hover:text-black font-semibold text-white py-2 px-4 border hover:border-black border-transparent">
-            GET IN TOUCH
-          </button>
+        <div className="mb-4">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="email"
+          >
+            Email
+          </label>
+          <input
+            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="email"
+            type="email"
+            placeholder="Your Email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
         </div>
-      </div>
+        <div className="mb-4">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="message"
+          >
+            Message
+          </label>
+          <textarea
+            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="message"
+            placeholder="Your Message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            rows="5"
+            required
+          ></textarea>
+        </div>
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
     </div>
   );
 };

@@ -1,31 +1,60 @@
-import React from "react";
+import React, { useEffect } from "react";
 import videoBg from "../assets/video.mp4";
 import circle from "../assets/circle.png";
 import arrow from "../assets/arrow.png";
 
 const Main = () => {
-  return (
-    <div className="w-full h-screen m-0 p-0 font-oswald">
-      <a href="#contact">
-        <div className="h-full w-full opacity-40 bg-black absolute"></div>
+  useEffect(() => {
+    const handleScroll = () => {
+      const viewportHeight = window.innerHeight;
+      const scrollPosition =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const videoContainer = document.getElementById("video-container");
+      const blackOverlay = document.getElementById("black-overlay");
 
-        <video
-          className="w-full h-full object-cover"
-          src={videoBg}
-          autoPlay
-          loop
-          muted
-        />
+      if (videoContainer && blackOverlay) {
+        const blackOverlayOpacity = Math.min(
+          scrollPosition / (viewportHeight * 0.65),
+          1
+        );
+        blackOverlay.style.opacity = blackOverlayOpacity.toString();
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return (
+    <div className="w-full h-screen m-0 p-0 font-oswald z-10 ">
+      <a href="#contact">
+        <div
+          id="black-overlay"
+          className="h-full w-full opacity-40 bg-gray-900 absolute"
+        ></div>
+
+        <div id="video-container" className="w-full h-full">
+          <video
+            className="w-full h-full object-cover"
+            src={videoBg}
+            autoPlay
+            loop
+            muted
+          />
+        </div>
 
         <div className="absolute w-full h-full top-0 flex flex-col justify-center items-center text-white">
           <h1 className="text-2xl md:text-5xl lg:text-9xl">KELOPE PICTURES</h1>
           <div className="flex justify-center w-1/4 mt-16">
-            <img className="relative w-16" src={circle} alt="" />
-            <img
-              className="absolute animate-bounce w-6 mt-6"
+            {/* <img className="relative w-16" src={circle} alt="" /> */}
+
+            {/* <img
+              className="absolute animate-bounce  w-6 mt-6"
               src={arrow}
               alt=""
-            />
+            /> */}
           </div>
         </div>
       </a>
