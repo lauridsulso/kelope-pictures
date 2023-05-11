@@ -1,12 +1,12 @@
 import Main from "./components/Main";
-import Contact from "./components/Contact";
+import Contact2 from "./components/Contact2";
 import GetInTouch from "./components/GetInTouch";
 
 function App() {
   return (
     <div className="App">
       <Main />
-      <Contact />
+      <Contact2 />
       <GetInTouch />
     </div>
   );

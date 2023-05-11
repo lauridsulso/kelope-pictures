@@ -3,7 +3,7 @@ import production from "../assets/production.jpg";
 
 const Contact = () => {
   return (
-    <div id="contact" className="h-screen m-0 p-16 h-screen font-oswald">
+    <div id="contact" className="h-screen max-w-screen m-0 p-16 font-oswald">
       <div className="flex flex-row justify-around">
         <div className="basis-2/5">
           <h1 className="text-8xl">

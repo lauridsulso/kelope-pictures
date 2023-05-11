@@ -18,7 +18,7 @@ const Main = () => {
         />
 
         <div className="absolute w-full h-full top-0 flex flex-col justify-center items-center text-white">
-          <h1 className="text-9xl">KELOPE PICTURES</h1>
+          <h1 className="text-2xl md:text-5xl lg:text-9xl">KELOPE PICTURES</h1>
           <div className="flex justify-center w-1/4 mt-16">
             <img className="relative w-16" src={circle} alt="" />
             <img
