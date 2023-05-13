@@ -1,5 +1,5 @@
 import React from "react";
-import kelopefooter from "../assets/kelope-footer.jpg";
+import kelopefooter from "../assets/kelope-white.png";
 
 const News = () => {
   return (

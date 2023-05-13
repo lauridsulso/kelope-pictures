@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import videoBg from "../assets/video.mp4";
-import circle from "../assets/circle.png";
-import arrow from "../assets/arrow.png";
+import kelopewhite from "../assets/kelope-white.png";
 
 const Main = () => {
   useEffect(() => {
@@ -46,7 +45,8 @@ const Main = () => {
         </div>
 
         <div className="absolute w-full h-full top-0 flex flex-col justify-center items-center text-white">
-          <h1 className="text-2xl md:text-5xl lg:text-9xl">KELOPE PICTURES</h1>
+          <img src={kelopewhite} alt="" />
+          {/* <h1 className="text-2xl md:text-5xl lg:text-9xl">KELOPE PICTURES</h1> */}
           <div className="flex justify-center w-1/4 mt-16">
             {/* <img className="relative w-16" src={circle} alt="" /> */}
 
