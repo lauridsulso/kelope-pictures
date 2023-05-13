@@ -1,19 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import videoBg from "../assets/video.mp4";
 import kelopewhite from "../assets/kelope-white.png";
 
 const Main = () => {
+  const scrollRef = useRef(null);
   useEffect(() => {
     const handleScroll = () => {
       const viewportHeight = window.innerHeight;
+
       const scrollPosition =
         window.pageYOffset || document.documentElement.scrollTop;
       const videoContainer = document.getElementById("video-container");
       const blackOverlay = document.getElementById("black-overlay");
+      const { scrollTop, scrollHeight, clientHeight } =
+        document.documentElement;
 
+      if (scrollTop + clientHeight >= scrollHeight - 10) {
+        // Scroll to the bottom
+        scrollRef.current.scrollIntoView({ behavior: "smooth" });
+      }
       if (videoContainer && blackOverlay) {
         const blackOverlayOpacity = Math.min(
-          scrollPosition / (viewportHeight * 0.65),
+          scrollPosition / (viewportHeight * 0.25),
           1
         );
         blackOverlay.style.opacity = blackOverlayOpacity.toString();
@@ -31,10 +39,10 @@ const Main = () => {
       <a href="#contact">
         <div
           id="black-overlay"
-          className="h-full w-full opacity-40 bg-gray-900 absolute"
+          className="h-screen w-full opacity-40 bg-gray-900 absolute"
         ></div>
 
-        <div id="video-container" className="w-full h-full">
+        <div id="video-container" className="w-screen h-screen">
           <video
             className="w-full h-full object-cover"
             src={videoBg}

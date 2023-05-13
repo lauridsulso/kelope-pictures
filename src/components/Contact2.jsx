@@ -33,9 +33,9 @@ const Contact2 = ({ onContactClick }) => {
 
         <button
           onClick={onContactClick}
-          class="bg-gray-500 hover:bg-gray-700 text-white font-semibold py-2 px-4 border border-gray-700 rounded shadow mt-12 w-full md:w-1/2  m-auto font-normal"
+          class="border border-white hover:border-white bg-white hover:bg-transparent hover:text-white text-gray-900 font-semibold py-2 px-4 border border-gray-700 rounded shadow mt-12 w-full md:w-1/2  m-auto font-normal hover:tracking-widest duration-300 "
         >
-          Cumque aspernatur
+          GET IN TOUCH
         </button>
         {/* </div> */}
         <div
@@ -44,6 +44,13 @@ const Contact2 = ({ onContactClick }) => {
         >
           <div className="flex items-center justify-center">
             <img width="120px" src={kelopefooter} alt="" />
+          </div>
+
+          <div className="font-light">
+            <a className="" href="mailto:style@kelopepictures.com">
+              <p className="hover:underline">style@kelopepictures.com</p>
+            </a>
+            <p>© Kelopepictures 2023</p>
           </div>
 
           <div>
@@ -55,13 +62,6 @@ const Contact2 = ({ onContactClick }) => {
                 alt=""
               />
             </a>
-          </div>
-
-          <div className="font-light">
-            <a className="" href="mailto:kelope@pictures.com">
-              <p className="hover:underline">kelope@pictures.com</p>
-            </a>
-            <p>© Kelopepictures 2023</p>
           </div>
         </div>
       </div>

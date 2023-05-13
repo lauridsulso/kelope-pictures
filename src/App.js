@@ -4,6 +4,7 @@ import Contact2 from "./components/Contact2";
 // import Navigation from "./components/Navigation";
 import News from "./components/News";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   const [showNews, setShowNews] = useState(false);
@@ -31,6 +32,7 @@ function App() {
 
       {!showNews && <Main />}
       {!showNews && <Contact2 />}
+      {/* {!showNews && <Footer />} */}
       {showNews && <News />}
       {showContact && <Contact />}
     </div>
