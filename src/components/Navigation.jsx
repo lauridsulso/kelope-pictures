@@ -27,22 +27,22 @@ const Navigation = ({ onNewsClick, onBackClick }) => {
     >
       <ul className="flex justify-end gap-4">
         <li className="">
-          {/* <a
+          <a
             href="#contact"
-            className="font-bold text-2xl font-normal text-white hover:bg-gray-200 px-4 py-2 hover:bg-opacity-50"
+            className="font-bold text-2xl font-normal text-white hover:bg-gray-200 px-4 py-2 hover:bg-opacity-10 rounded-sm"
             onClick={onBackClick}
           >
             CONTACT
-          </a> */}
+          </a>
         </li>
         <li>
-          {/* <a
+          <a
             onClick={onNewsClick}
             href="#"
-            className="font-bold text-2xl font-normal text-white hover:bg-gray-200 px-4 py-2 hover:bg-opacity-50"
+            className="font-bold text-2xl font-normal text-white hover:bg-gray-200 px-4 py-2 hover:bg-opacity-10 rounded-sm"
           >
             NEWS
-          </a> */}
+          </a>
         </li>
       </ul>
     </nav>
