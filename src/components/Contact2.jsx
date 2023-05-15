@@ -18,7 +18,7 @@ const Contact2 = ({ onContactClick }) => {
           Unleash the power of <br />{" "}
           <span className="font-normal text-white"> visual storytelling</span>
         </h1>
-        <p className="mt-4 md:mt-12 font-thin">
+        <p className="mt-4 md:mt-12 text-gray-300 font-thin text-base md:text-xl">
           At Kelope Pictures, we breathe life into stories that mesmerize,
           entertain, and inspire. With a commitment to pushing creative
           boundaries and a dedication to producing visually stunning movies, we

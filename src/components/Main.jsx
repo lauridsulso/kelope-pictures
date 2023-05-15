@@ -42,9 +42,9 @@ const Main = () => {
           className="h-screen w-full opacity-40 bg-gray-900 absolute"
         ></div>
 
-        <div id="video-container" className="w-screen h-screen">
+        <div id="video-container" className="max-w-screen h-screen">
           <video
-            className="w-full h-full object-cover"
+            className="max-w-screen h-full object-cover"
             src={videoBg}
             autoPlay
             loop
