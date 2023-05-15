@@ -49,6 +49,7 @@ const Main = () => {
             autoPlay
             loop
             muted
+            playsInline
           />
         </div>
 

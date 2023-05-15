@@ -15,28 +15,24 @@ const Contact2 = ({ onContactClick }) => {
       >
         {/* <div id="opacity-bg" className="h-full bg-gray-100 opacity-90 p-4 z-10"> */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-thin text-center  text-gray-400 mt-0 md:mt-24">
-          Lorem ipsum dolor <br />{" "}
-          <span className="font-normal text-white">
-            {" "}
-            consectetur adipisicing.
-          </span>
+          Unleash the power of <br />{" "}
+          <span className="font-normal text-white"> visual storytelling</span>
         </h1>
         <p className="mt-4 md:mt-12 font-thin">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
-          ratione veniam nulla. Iusto repudiandae aperiam architecto aut
-          dolorem! Vitae, sequi. Minima ab explicabo facere animi autem quos
-          nesciunt distinctio doloribus. Cumque aspernatur soluta pariatur
-          obcaecati, accusantium sequi laborum aut totam reprehenderit velit
-          porro asperiores quaerat molestiae in commodi earum beatae repellat
-          quia excepturi minima error? Corporis quia totam non commodi.
+          At Kelope Pictures, we breathe life into stories that mesmerize,
+          entertain, and inspire. With a commitment to pushing creative
+          boundaries and a dedication to producing visually stunning movies, we
+          aim to leave a lasting impact on the hearts and minds of movie
+          enthusiasts. Join us on a cinematic journey like no other.
         </p>
 
-        <button
-          onClick={onContactClick}
-          class="border border-white hover:border-white bg-white hover:bg-transparent hover:text-white text-gray-900 font-semibold py-2 px-4 border border-gray-700 rounded shadow mt-12 w-full md:w-1/2  m-auto font-normal hover:tracking-widest duration-300 "
+        <a
+          className="border border-white hover:border-white bg-white hover:bg-transparent hover:text-white text-gray-900 font-semibold py-2 px-4 border border-gray-700 rounded shadow mt-12 w-full md:w-1/2  m-auto font-normal hover:tracking-widest duration-300 text-center"
+          href="mailto:style@kelopepictures.com"
         >
           GET IN TOUCH
-        </button>
+        </a>
+
         {/* </div> */}
         <div
           id="footer"
